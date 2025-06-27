@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', 'Public Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
@@ -567,15 +569,14 @@ h3 {
   padding: 20px;
 }
 
+
+
 @media (max-width: 950px) {
   .contact-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
-  }
-}
-
-@media (max-width: 600px) {
-  .contact-grid {
-    grid-template-columns: 1fr; /* stack on small devices */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -639,4 +640,67 @@ h3 {
   display: inline-block;
   margin-top: 8px;
   color: #2c3e50;
+}
+
+
+/* DISPLAY CARDS OF TECH TOOL SECTION */
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.scroll-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+  gap: 30px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.polaroid {
+  background: white;
+  padding: 12px;
+  width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* Slight rotation for natural polaroid effect */
+.tilt-left {
+  transform: rotate(-3deg);
+}
+
+.tilt-right {
+  transform: rotate(3deg);
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
 }
