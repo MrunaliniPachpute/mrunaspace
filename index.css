@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
+
+/* HEADER CSS */
+
 .banner {
   height: 60px;
   width: 100%;
@@ -11,7 +17,9 @@
   justify-content: flex-end;
   padding-right: 20px;
   margin-bottom: 15px;
+
 }
+
 
 nav {
   position: relative;
@@ -93,12 +101,25 @@ nav span {
   .hamburger {
     display: block;
     color: #000000;
-    right: auto;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.9s ease;
+    border-radius: 8px;
   }
 
-  .banner {
-    justify-content: space-between;
-    padding: 0 15px;
+  .hamburger:hover {
+    color: #f5bcb8; /* Cyan glow */
+    box-shadow: 0 0 12px #6a5acd, 0 0 24px rgba(245, 93, 66, 0.6);
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  nav span{
+    display: none;
+  }
+
+  nav a:hover{
+    color: #ddd2d2;
   }
 }
 
@@ -181,8 +202,6 @@ h3 {
   margin-left: auto;
 }
 
-
-
 .glow-line {
   border: none;
   height: 4px;
@@ -195,7 +214,9 @@ h3 {
   animation: glow-move 3s linear infinite;
 }
 
-/* 👇 Using full 'grid-template' values with named areas */
+
+/* MAIN CONTENT CSS */
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -221,7 +242,6 @@ h3 {
   margin: 5px;
 }
 
-/* Each skill card */
 .skill {
   padding: 20px;
   border-radius: 10px;
@@ -245,16 +265,15 @@ h3 {
   gap: 30px;
 }
 
-/* Right side with circle image */
 .right-circle {
-  justify-self: end; /* pushes image to right in grid */
+  justify-self: end;
 }
 .right-circle img {
-  height: 420px;
+  height: 450px;
   width: auto;
 }
 
-/* 🎨 Professional color palette */
+
 .red {
   background-color: #dc2626;
 }
@@ -285,7 +304,7 @@ h3 {
   background-color: #16a34a;
 }
 
-/* Responsive layout */
+
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -302,7 +321,6 @@ h3 {
     margin: 0 auto;
   }
 }
-
 
 .rotating-wrapper {
   display: inline-block;
@@ -358,7 +376,7 @@ h3 {
   }
 }
 
-#about{
+#about {
   padding-left: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -371,7 +389,6 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: center;
-
 }
 
 .stats-grid {
@@ -381,7 +398,6 @@ h3 {
   max-width: 900px;
   margin: 0 auto;
   justify-items: center;
-  
 }
 
 .stat-card {
@@ -399,7 +415,7 @@ h3 {
   justify-content: center;
 }
 
-.stat-card .des{
+.stat-card .des {
   font-size: 12px;
 }
 
@@ -408,11 +424,19 @@ h3 {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Colored Borders Matching Screenshot */
-.green-border  { border-color: #27ae60; }
-.red-border    { border-color: #e74c3c; }
-.orange-border { border-color: #f39c12; }
-.blue-border   { border-color: #2980b9; }
+/* Colored Borders Matching Screenshot IN ABOUT SECTION */
+.green-border {
+  border-color: #27ae60;
+}
+.red-border {
+  border-color: #e74c3c;
+}
+.orange-border {
+  border-color: #f39c12;
+}
+.blue-border {
+  border-color: #2980b9;
+}
 
 .stat-card h2 {
   font-size: 28px;
@@ -426,10 +450,193 @@ h3 {
   color: #333;
 }
 
-@media (max-width: 600px) {
-  .stat-card {
-    width: 100%;
-    max-width: 250px;
+@media (max-width: 800px) {
+  .stats-grid{
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
+/* PROJECT SECTION CSS */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0;
+}
+
+
+.list-group-item {
+  font-size: 15px;
+  background-color: #f9f9f9;
+  border: none;
+  color: #444;
+}
+
+
+.card-body{
+  display: flex;
+  justify-content: center;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+
+.card-button .btn-success {
+  display: block;
+  margin-top: 10px;
+  width: 70%;
+  font-weight: bold;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  border: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card-button .btn-success:hover {
+  background: linear-gradient(90deg, #1e8449, #27ae60);
+  transform: scale(1.05);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+
+/* FOOTER CONTACT ME SECTION CSS */
+
+.coffee-line {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+
+.contact-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.contact-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #222;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 950px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* stack on small devices */
+  }
+}
+
+
+.contact-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Themed backgrounds */
+.red .icon {
+  background: #e74c3c;
+}
+
+.blue .icon {
+  background: #3498db;
+}
+
+.yellow .icon {
+  background: #f1c40f;
+  color: #333;
+}
+
+.green .icon {
+  background: #2ecc71;
+}
+
+.contact-card h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #333;
+}
+
+.contact-card p,
+.contact-card a {
+  font-size: 15px;
+  color: #666;
+  text-decoration: none;
+}
+
+.resume-link {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 8px;
+  color: #2c3e50;
+}
