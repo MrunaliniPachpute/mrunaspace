@@ -461,14 +461,16 @@ h3 {
 
 /* PROJECT SECTION CSS */
 
+
 .card {
   border: none;
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
+  background-color: #f5eeee;
   margin: 20px auto;
+  padding: 5px;
 }
 
 .card:hover {
@@ -509,6 +511,15 @@ h3 {
   justify-content: center;
   align-items: center;
   padding-bottom: 15px;
+  
+}
+
+.card-button .b1{
+  margin: 0.5px;
+}
+
+.card-button .b2{
+  margin: 0.5px;
 }
 
 
@@ -704,3 +715,5 @@ h3 {
   transform: scale(1.05) rotate(0deg);
   z-index: 10;
 }
+
+
