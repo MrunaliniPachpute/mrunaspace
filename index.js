@@ -38,7 +38,7 @@ function type1() {
   if (index < text.length) {
     element.textContent += text.charAt(index);
     index++;
-    setTimeout(type1, 100); // speed in ms
+    setTimeout(type1, 130); // speed in ms
   }
 }
 type1();

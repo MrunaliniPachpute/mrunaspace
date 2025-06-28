@@ -716,4 +716,22 @@ h3 {
   z-index: 10;
 }
 
+.writeUp U {
+  font-weight: 500;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #fff5ef, #fff2ed);
+  text-decoration: none;
+}
 
+.M{
+  color: #47A248;;
+}
+.E{
+  color: black;
+}
+.R{
+  color: #61DAFB;
+}
+.N{
+  color: #339933;
+}
