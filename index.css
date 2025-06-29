@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', 'Public Sans', sans-serif;
@@ -7,6 +6,7 @@
 }
 body {
   overflow-x: hidden;
+  padding-top: 60px;
 }
 
 /* HEADER CSS */
@@ -19,7 +19,15 @@ body {
   justify-content: flex-end;
   padding-right: 20px;
   margin-bottom: 15px;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+}
 
+.container{
+   margin-top: 30px;
+   overflow: hidden; /* hides any overflowing content */
+  position: relative; /* in case absolutely positioned elements are inside */
 }
 
 
@@ -71,6 +79,8 @@ nav span {
   box-shadow: 0 0 15px rgba(51, 255, 252, 0.5);
   transition: all 0.4s ease;
 }
+
+
 
 .hamburger {
   display: none;
@@ -271,9 +281,15 @@ h3 {
   justify-self: end;
 }
 .right-circle img {
-  height: 450px;
+  height: 300px;
   width: auto;
+  left: 50px;
+  margin-left: 80px;
+  transform: rotate(45deg); /* or any degree */
+  transform-origin: center center;
 }
+
+
 
 
 .red {
@@ -734,4 +750,14 @@ h3 {
 }
 .N{
   color: #339933;
+}
+
+.material-symbols-outlined{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(248, 176, 176);
 }

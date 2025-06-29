@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_control_key" />
 
 </head>
 
@@ -16,11 +18,11 @@
     <!-- header -->
     <div class="banner">
         <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Achievements</a>
-            <a href="#">Contact</a>
+            <a href="#" onclick="homeClicked(event)">Home</a>
+            <a href="#" onclick="aboutClicked(event)">About</a>
+            <a href="#" onclick="projClicked(event)">Projects</a>
+            <a href="#" onclick="sparksClicked(event)">Sparks</a>
+            <a href="#" onclick="contactClicked(event)">Contact</a>
             <span></span>
         </nav>
         <div class="hamburger">&#9776;</div>
@@ -37,7 +39,8 @@
                     <span class="R"> R</span>
                     <span class="N">N</span>
                     stack developer & AI enthusiast driving innovation <br>through full-stack solutions, MLSA
-                    leadership, and a passion <br>for building unique, impact-driven projects.</h3>
+                    leadership, and a passion <br>for building unique, impact-driven projects.
+                </h3>
             </div>
             <div class="video">
                 <div class="video-wrapper">
@@ -70,7 +73,8 @@
                     In addition to this, I’ve participated in various <u>hackathons</u> and have been fortunate to
                     receive
                     multiple <u>awards and recognitions</u>, some of which are highlighted below.
-                    I always strive to bring something that’s truly <u><i>my signature blend of creativity and impact</i></u> to every project I work on.<br>
+                    I always strive to bring something that’s truly <u><i>my signature blend of creativity and
+                            impact</i></u> to every project I work on.<br>
 
                     My experience so far includes a wide range of technical and leadership roles. I am currently seeking
                     opportunities <u>to gain real-world industry experience</u>, deepen my expertise, take on greater
@@ -152,7 +156,7 @@
 
         <div class="grid-container">
             <div class="left-content">
-                <div class="title">Tech Stack & Tools</div>
+                <div class="title">Sparks</div>
                 <div class="skills">
                     <div class="skill red">React.js</div>
                     <div class="skill green">MongoDB</div>
@@ -176,7 +180,7 @@
             <div class="scroll-track">
                 <!-- Card Set 1 -->
                 <div class="polaroid tilt-left">
-                    <img src="./assets/i.jfif" alt="Hackathon 1">
+                    <img src="./assets/i2.jfif" alt="Hackathon 1">
                     <div class="caption">Focused Developer</div>
                 </div>
                 <div class="polaroid tilt-right">
@@ -195,7 +199,7 @@
 
                 <!-- Duplicate Set for Infinite Loop -->
                 <div class="polaroid tilt-left">
-                    <img src="./assets/i.jfif" alt="Hackathon 1">
+                    <img src="./assets/i2.jfif" alt="Hackathon 1">
                     <div class="caption">Focused Developer</div>
                 </div>
                 <div class="polaroid tilt-right">
@@ -245,6 +249,11 @@
                 </div>
             </div>
         </section>
+
+        <!-- Scroll to Top Button -->
+        <span class="material-symbols-outlined" style="display: none;" onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+            keyboard_control_key
+        </span>
 
 
 

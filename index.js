@@ -77,3 +77,59 @@ skillSection.addEventListener("mouseleave", () => {
   });
 });
 
+
+ // Show the button after scrolling 100px
+  window.onscroll = function() {
+
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll to top when button is clicked
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  function homeClicked(e){
+    e.preventDefault(); 
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+
+  function aboutClicked(e){
+    e.preventDefault(); 
+     window.scrollTo({
+      top: 450,
+      behavior: "smooth"
+    })
+  }
+  function projClicked(e){
+    e.preventDefault(); 
+     window.scrollTo({
+      top: 1150,
+      behavior: "smooth"
+    })
+  }
+  function sparksClicked(e){
+    e.preventDefault(); 
+     window.scrollTo({
+      top: 1900,
+      behavior: "smooth"
+    })
+  }
+  function contactClicked(e){
+    e.preventDefault(); 
+     window.scrollTo({
+      top:document.body.scrollHeight,
+      behavior: "smooth"
+    })
+  }
